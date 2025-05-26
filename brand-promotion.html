@@ -6,19 +6,22 @@
 <title>Brand Promotion - FocusTV</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 <style>
-  /* same styles for consistency */
   body, html { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #fff8e1; color: #333; }
   header { background: linear-gradient(90deg, #ff4081, #ff9800); text-align: center; padding: 0; }
   .logo-banner img { width: 100%; max-height: 150px; object-fit: cover; display: block; }
-  nav { display: flex; justify-content: center; background: #fbc02d; padding: 0.6em 0; }
+  nav { display: flex; justify-content: center; background: #fbc02d; padding: 0.6em 0; flex-wrap: wrap; }
   nav a { text-decoration: none; color: #000; margin: 0 1em; font-weight: 700; transition: color 0.3s ease; }
   nav a:hover { color: #ff4081; }
   main { max-width: 900px; margin: 2em auto; padding: 0 1em; }
   h1 { color: #ff4081; font-weight: 700; margin-bottom: 0.5em; text-align: center; }
-  h2 { color: #f57c00; margin-top: 1.5em; }
-  ul { list-style-type: disc; margin-left: 20px; line-height: 1.5em; }
   p { font-size: 1.1em; line-height: 1.6em; }
   footer { background: #2196f3; color: white; text-align: center; padding: 1em; margin-top: 3em; }
+
+  @media (max-width: 600px) {
+    nav { flex-direction: column; align-items: center; padding: 0.5em 0; }
+    nav a { margin: 0.5em 0; font-size: 1.1em; }
+    main { padding: 0 1em; margin: 1em auto; }
+  }
 </style>
 </head>
 <body>
@@ -36,27 +39,8 @@
 
 <main>
   <h1>Brand Promotion</h1>
-  <p>Boost your brand’s visibility and connect deeply with your audience using FocusTV’s brand promotion services. We craft creative visual campaigns tailored to showcase your unique value and grow your market presence.</p>
-
-  <h2>Key Features</h2>
-  <ul>
-    <li>Custom video advertisements and commercials</li>
-    <li>Social media campaign videos and graphics</li>
-    <li>Brand storytelling through engaging content</li>
-    <li>Targeted promotion strategies</li>
-    <li>Performance tracking and analytics</li>
-  </ul>
-
-  <h2>Benefits</h2>
-  <ul>
-    <li>Increase brand awareness and customer engagement</li>
-    <li>Stand out in competitive markets with professional content</li>
-    <li>Enhance brand image and loyalty through storytelling</li>
-    <li>Maximize ROI with targeted marketing efforts</li>
-  </ul>
-
-  <h2>How It Works</h2>
-  <p>We begin by understanding your brand and goals. Our creative team then develops concepts and content tailored for your target audience. We execute multi-channel promotion and provide detailed insights on campaign success.</p>
+  <p>Promote your brand with FocusTV’s expert marketing and advertising services. We create tailored promotional campaigns across TV, online platforms, and social media to increase your brand visibility and reach your target audience effectively.</p>
+  <p>Our creative team works with you to craft compelling content that highlights your brand’s unique value and drives engagement.</p>
 </main>
 
 <footer>
