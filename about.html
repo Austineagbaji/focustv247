@@ -1,68 +1,146 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>FocusTV - About Us</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-<style>
-  body, html {
-    margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #fff8e1; color: #333;
-  }
-  header {
-    background: linear-gradient(90deg, #ff4081, #ff9800);
-    text-align: center;
-    padding: 0;
-  }
-  .logo-banner img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    display: block;
-  }
-  nav {
-    display: flex;
-    justify-content: center;
-    background: #fbc02d;
-    padding: 0.6em 0;
-  }
-  nav a {
-    text-decoration: none;
-    color: #000;
-    margin: 0 1em;
-    font-weight: 700;
-    transition: color 0.3s ease;
-  }
-  nav a:hover {
-    color: #ff4081;
-  }
-  main {
-    max-width: 900px;
-    margin: 2em auto;
-    padding: 0 1em;
-  }
-  h1 {
-    color: #ff4081;
-    font-weight: 700;
-    margin-bottom: 0.5em;
-    text-align: center;
-  }
-  p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    text-align: justify;
-    color: #555;
-  }
-  footer {
-    background: #2196f3;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    margin-top: 3em;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FocusTV - About Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #fff8e1;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff4081, #ff9800);
+      text-align: center;
+    }
+
+    .logo-banner img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #fbc02d;
+      padding: 0.6em 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      margin: 0 1em;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff4081;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff4081;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+    }
+
+    h2 {
+      color: #ff9800;
+      font-size: 1.5rem;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: justify;
+      color: #555;
+      margin-bottom: 1em;
+    }
+
+    section {
+      margin-bottom: 3em;
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5em;
+    }
+
+    .testimonial {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .testimonial p {
+      font-style: italic;
+    }
+
+    .testimonial .author {
+      font-weight: bold;
+      margin-top: 0.5em;
+    }
+
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+    }
+
+    .member {
+      text-align: center;
+      max-width: 200px;
+    }
+
+    .member img {
+      width: 100%;
+      border-radius: 50%;
+      border: 3px solid #ff4081;
+      object-fit: cover;
+    }
+
+    .member h3 {
+      margin: 0.5em 0 0.2em;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .member p {
+      font-size: 0.95rem;
+      color: #777;
+    }
+
+    footer {
+      background: #2196f3;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      margin-top: 3em;
+    }
+  </style>
 </head>
 <body>
 
@@ -83,16 +161,77 @@
 
 <main>
   <h1>About FocusTV</h1>
-  <p>
-    FocusTV is your premier destination for vibrant, engaging, and creative digital media services.
-    Founded with a passion for innovation and excellence, we deliver fresh content, stylish design, and
-    cutting-edge solutions that keep you connected and inspired.
-  </p>
-  <p>
-    Our team of experts combines bold ideas with technical skills to bring you an experience like no other.
-    Whether it’s multimedia production, digital marketing, or creative consulting, FocusTV is focused on
-    delivering quality that stands out.
-  </p>
+
+  <section>
+    <h2>Who We Are</h2>
+    <p>
+      FocusTV is your premier destination for vibrant, engaging, and creative digital media services.
+      Founded with a passion for innovation and excellence, we deliver fresh content, stylish design, and
+      cutting-edge solutions that keep you connected and inspired.
+    </p>
+  </section>
+
+  <section>
+    <h2>What We Do</h2>
+    <p>
+      Our team of experts combines bold ideas with technical skills to bring you an experience like no other.
+      Whether it’s multimedia production, digital marketing, or creative consulting, FocusTV is focused on
+      delivering quality that stands out.
+    </p>
+  </section>
+
+  <section>
+    <h2>Our Mission</h2>
+    <p>
+      To empower voices, connect audiences, and create memorable digital experiences that reflect creativity, purpose, and progress.
+    </p>
+  </section>
+
+  <section>
+    <h2>Our Vision</h2>
+    <p>
+      To be a leading media platform that redefines creativity and innovation in storytelling across Africa and beyond.
+    </p>
+  </section>
+
+  <section>
+    <h2>Testimonials</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"FocusTV transformed our brand presence online. Their content is fresh, fun, and effective!"</p>
+        <div class="author">– Ada E., Business Owner</div>
+      </div>
+      <div class="testimonial">
+        <p>"What a team! Professional, fast, and always creative. Highly recommended for media production."</p>
+        <div class="author">– Chinedu K., Event Planner</div>
+      </div>
+      <div class="testimonial">
+        <p>"Their designs always hit the mark. FocusTV brought our vision to life beyond expectation."</p>
+        <div class="author">– Zainab M., Fashion Entrepreneur</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Meet the Team</h2>
+    <div class="team">
+      <div class="member">
+        <img src="team1.jpg" alt="Jane Doe" />
+        <h3>Jane Doe</h3>
+        <p>Creative Director</p>
+      </div>
+      <div class="member">
+        <img src="team2.jpg" alt="John Smith" />
+        <h3>John Smith</h3>
+        <p>Media Producer</p>
+      </div>
+      <div class="member">
+        <img src="team3.jpg" alt="Mary Johnson" />
+        <h3>Mary Johnson</h3>
+        <p>Marketing Strategist</p>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
