@@ -1,0 +1,139 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FocusTV - Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #fff8e1;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #ff4081, #ff9800);
+      text-align: center;
+      padding: 0;
+    }
+    .logo-banner img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #fbc02d;
+      padding: 0.6em 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #000;
+      margin: 0 1em;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff4081;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+    h1 {
+      text-align: center;
+      color: #ff4081;
+      font-weight: 700;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2em;
+      margin-top: 2em;
+    }
+    .product {
+      background: white;
+      border: 2px solid #ff9800;
+      border-radius: 10px;
+      padding: 1em;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+    }
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .product h3 {
+      margin: 0.5em 0 0.2em;
+      color: #ff4081;
+      font-weight: 700;
+    }
+    .product p {
+      font-size: 0.9em;
+      color: #555;
+    }
+    footer {
+      background: #2196f3;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      margin-top: 3em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-banner">
+    <img src="LOGO.png" alt="FocusTV Logo" />
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="products.html">Products</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Our Products</h1>
+  <div class="product-grid">
+    <div class="product">
+      <img src="product1.jpg" alt="Product 1">
+      <h3>Streaming Box</h3>
+      <p>High-definition streaming device with built-in channels.</p>
+    </div>
+    <div class="product">
+      <img src="product2.jpg" alt="Product 2">
+      <h3>FocusTV Smart Stick</h3>
+      <p>Plug and play TV stick with 4K resolution and apps.</p>
+    </div>
+    <div class="product">
+      <img src="product3.jpg" alt="Product 3">
+      <h3>Wireless Remote</h3>
+      <p>Universal remote control compatible with all FocusTV products.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 FocusTV. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
