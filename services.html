@@ -1,113 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>FocusTV - Services</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-<style>
-  body, html {
-    margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #fff8e1; color: #333;
-  }
-  header {
-    background: linear-gradient(90deg, #ff4081, #ff9800);
-    text-align: center;
-    padding: 0;
-  }
-  .logo-banner img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    display: block;
-  }
-  nav {
-    display: flex;
-    justify-content: center;
-    background: #fbc02d;
-    padding: 0.6em 0;
-    flex-wrap: wrap;
-  }
-  nav a {
-    text-decoration: none;
-    color: #000;
-    margin: 0 1em;
-    font-weight: 700;
-    transition: color 0.3s ease;
-  }
-  nav a:hover {
-    color: #ff4081;
-  }
-  main {
-    max-width: 900px;
-    margin: 2em auto;
-    padding: 0 1em;
-  }
-  h1 {
-    color: #ff4081;
-    font-weight: 700;
-    margin-bottom: 0.5em;
-    text-align: center;
-  }
-  ul.services-list {
-    list-style-type: none;
-    padding: 0;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  ul.services-list li {
-    background: #ff9800;
-    color: white;
-    padding: 1em 1.2em;
-    margin-bottom: 1em;
-    font-weight: 600;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(255, 152, 0, 0.4);
-    transition: background 0.3s ease;
-  }
-  ul.services-list li:hover {
-    background: #ff4081;
-    cursor: pointer;
-  }
-  ul.services-list li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-  }
-  ul.services-list li a:hover {
-    text-decoration: underline;
-  }
-  footer {
-    background: #2196f3;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    margin-top: 3em;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FocusTV - Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body, html {
+      margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #fff8e1; color: #333;
+    }
 
-  @media (max-width: 600px) {
+    header {
+      background: linear-gradient(90deg, #ff4081, #ff9800);
+      text-align: center;
+      padding: 0;
+    }
+
+    .logo-banner img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
     nav {
-      flex-direction: column;
-      align-items: center;
-      padding: 0.5em 0;
+      display: flex;
+      justify-content: center;
+      background: #fbc02d;
+      padding: 0.6em 0;
+      flex-wrap: wrap;
     }
+
     nav a {
-      margin: 0.5em 0;
-      font-size: 1.1em;
+      text-decoration: none;
+      color: #000;
+      margin: 0 1em;
+      font-weight: 700;
+      transition: color 0.3s ease;
     }
+
+    nav a:hover {
+      color: #ff4081;
+    }
+
     main {
+      max-width: 1000px;
+      margin: 2em auto;
       padding: 0 1em;
-      margin: 1em auto;
     }
-    ul.services-list {
-      max-width: 100%;
-      padding: 0 0.5em;
+
+    h1 {
+      color: #ff4081;
+      font-weight: 700;
+      margin-bottom: 1.5em;
+      text-align: center;
     }
-    ul.services-list li {
+
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5em;
+      justify-content: center;
+    }
+
+    .service-card {
+      background: #ff9800;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(255, 152, 0, 0.4);
+      padding: 1.5em;
+      flex: 1 1 200px;
+      max-width: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: background 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .service-card:nth-child(1) { animation-delay: 0.2s; }
+    .service-card:nth-child(2) { animation-delay: 0.4s; }
+    .service-card:nth-child(3) { animation-delay: 0.6s; }
+    .service-card:nth-child(4) { animation-delay: 0.8s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .service-card:hover {
+      background: #ff4081;
+      transform: translateY(-5px);
+    }
+
+    .service-card a {
+      color: white;
+      font-weight: 700;
+      font-size: 1.2em;
+      text-decoration: none;
+      margin-bottom: 0.5em;
+    }
+
+    .service-card a:hover {
+      text-decoration: underline;
+    }
+
+    .service-description {
+      font-size: 0.95em;
+      line-height: 1.4;
+    }
+
+    .service-icon {
+      font-size: 2.2em;
+      margin-bottom: 0.5em;
+    }
+
+    .cta-section {
+      margin-top: 3em;
+      background: #fff3e0;
+      padding: 2em;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .cta-section h2 {
+      color: #ff4081;
+      margin-bottom: 0.5em;
+    }
+
+    .cta-section p {
+      margin-bottom: 1em;
+    }
+
+    .cta-section a {
+      background: #ff9800;
+      color: white;
+      padding: 0.7em 1.5em;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta-section a:hover {
+      background: #ff4081;
+    }
+
+    footer {
+      background: #2196f3;
+      color: white;
+      text-align: center;
       padding: 1em;
-      font-size: 1.1em;
+      margin-top: 3em;
     }
-  }
-</style>
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5em 0;
+      }
+      nav a {
+        margin: 0.5em 0;
+        font-size: 1.1em;
+      }
+      .service-card {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -128,12 +196,34 @@
 
 <main>
   <h1>Our Services</h1>
-  <ul class="services-list">
-    <li><a href="live-streaming.html">Live Streaming</a></li>
-    <li><a href="media-coverage.html">Media Coverage</a></li>
-    <li><a href="brand-promotion.html">Brand Promotion</a></li>
-    <li><a href="event-broadcasting.html">Event Broadcasting</a></li>
-  </ul>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-video"></i></div>
+      <a href="live-streaming.html">Live Streaming</a>
+      <div class="service-description">Broadcast your events live to audiences anywhere in the world with crystal-clear video and audio.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-camera"></i></div>
+      <a href="media-coverage.html">Media Coverage</a>
+      <div class="service-description">We provide full media support for your events, from photography to video documentation and press.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+      <a href="brand-promotion.html">Brand Promotion</a>
+      <div class="service-description">Let us take your brand to the next level with digital and on-ground promotional strategies that work.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-broadcast-tower"></i></div>
+      <a href="event-broadcasting.html">Event Broadcasting</a>
+      <div class="service-description">We offer full event coverage with broadcast-ready quality, reaching TV and online audiences seamlessly.</div>
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <h2>Need Help Getting Started?</h2>
+    <p>Contact us today to learn more about how FocusTV can bring your next event or brand to life.</p>
+    <a href="contact.html">Get in Touch</a>
+  </div>
 </main>
 
 <footer>
