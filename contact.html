@@ -1,133 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>FocusTV - Contact Us</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-<style>
-  body, html {
-    margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #fff8e1; color: #333;
-  }
-  header {
-    background: linear-gradient(90deg, #ff4081, #ff9800);
-    text-align: center;
-    padding: 0;
-  }
-  .logo-banner img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    display: block;
-  }
-  nav {
-    display: flex;
-    justify-content: center;
-    background: #fbc02d;
-    padding: 0.6em 0;
-  }
-  nav a {
-    text-decoration: none;
-    color: #000;
-    margin: 0 1em;
-    font-weight: 700;
-    transition: color 0.3s ease;
-  }
-  nav a:hover {
-    color: #ff4081;
-  }
-  main {
-    max-width: 600px;
-    margin: 2em auto;
-    padding: 0 1em;
-  }
-  h1 {
-    color: #ff4081;
-    font-weight: 700;
-    margin-bottom: 0.5em;
-    text-align: center;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-  }
-  label {
-    font-weight: 600;
-    margin-bottom: 0.3em;
-  }
-  input, textarea {
-    padding: 0.8em;
-    border: 2px solid #ff9800;
-    border-radius: 6px;
-    font-size: 1em;
-    resize: vertical;
-    font-family: 'Roboto', sans-serif;
-  }
-  input:focus, textarea:focus {
-    outline: none;
-    border-color: #ff4081;
-    box-shadow: 0 0 5px #ff4081;
-  }
-  button {
-    background: #ff4081;
-    color: white;
-    padding: 1em;
-    border: none;
-    border-radius: 6px;
-    font-weight: 700;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  button:hover {
-    background: #e03574;
-  }
-  footer {
-    background: #2196f3;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    margin-top: 3em;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FocusTV - Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #fff8e1;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff4081, #ff9800);
+    }
+    .logo-banner img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: #fbc02d;
+      padding: 0.5em 1em;
+    }
+    nav a {
+      color: #000;
+      font-weight: 700;
+      text-decoration: none;
+      margin: 0.5em 1em;
+      font-size: 1em;
+    }
+    nav a:hover {
+      color: #ff4081;
+    }
+
+    main {
+      padding: 2em 1em;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff4081;
+      margin-bottom: 1em;
+      font-size: 2em;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      width: 100%;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.75em;
+      border: 2px solid #ff9800;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #ff4081;
+      box-shadow: 0 0 5px #ff4081;
+      outline: none;
+    }
+
+    button {
+      background: #ff4081;
+      color: #fff;
+      padding: 1em;
+      font-size: 1.1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #e03574;
+    }
+
+    .whatsapp-button {
+      display: block;
+      text-align: center;
+      margin: 2em 0;
+    }
+
+    .whatsapp-button a {
+      background: #25D366;
+      color: white;
+      padding: 0.9em 1.5em;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .whatsapp-button a:hover {
+      background: #1ebf5f;
+    }
+
+    .map-container {
+      margin-top: 2em;
+      text-align: center;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #2196f3;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        margin: 0.3em 0;
+        font-size: 0.95em;
+      }
+      h1 {
+        font-size: 1.6em;
+      }
+      button {
+        font-size: 1em;
+        padding: 0.9em;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="logo-banner">
-    <img src="LOGO.png" alt="FocusTV Logo" />
-  </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-    <a href="products.html">Products</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="blog.html">Blog</a>
-  </nav>
-</header>
+  <header>
+    <div class="logo-banner">
+      <img src="LOGO.png" alt="FocusTV Logo" />
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
 
-<main>
-  <h1>Contact Us</h1>
-  <form action="https://formspree.io/f/mldbypda" method="POST">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="Your full name" required />
-    
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="Your email address" required />
-    
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-    
-    <button type="submit">Send Message</button>
-  </form>
-</main>
+  <main>
+    <h1>Contact Us</h1>
+    <form action="https://formspree.io/f/mldbypda" method="POST">
+      <input type="text" name="name" placeholder="Your full name" required />
+      <input type="email" name="email" placeholder="Your email address" required />
+      <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
 
-<footer>
-  <p>&copy; 2025 FocusTV. All rights reserved.</p>
-</footer>
+    <div class="whatsapp-button">
+      <a href="https://wa.me/2347035272196" target="_blank">Chat with us on WhatsApp</a>
+    </div>
+
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126854.28923827812!2d7.3985749!3d9.0578516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b9d02cd43d3%3A0x6d2390b9e087ec9a!2sAbuja%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1707057200630!5m2!1sen!2sng" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FocusTV. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
